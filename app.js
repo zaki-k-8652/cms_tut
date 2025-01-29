@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const { engine } = require('express-handlebars');
-const {mongoDbUrl} = require('./config/configuration');
+const { mongoDbUrl } = require('./config/configuration');
 const app = express();
 
 mongoose.connect(mongoDbUrl)
@@ -20,10 +20,10 @@ app.engine('handlebars', engine({ defaultLayout: 'default' }));
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
-app.get('/', (req, res) => {
-    console.log("Rendering index page...");
-    res.render('default/index');
-});
+// Route
+const defaultRoutes = require('./routes/defaultRoutes');
+app.use('/', defaultRoutes);
+//app.use('/admin/', adminRoutes);
 
 app.listen(3000, () => {
     console.log("Server started on port 3000");
