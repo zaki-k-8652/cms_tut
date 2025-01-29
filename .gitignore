@@ -1,6 +1,7 @@
 # Example content for engineering college project
+.idea/
 node_modules/
 data/
 .env
 *.log
-.DS_Store
+.DS_Storetest.txt
