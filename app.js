@@ -12,6 +12,7 @@ mongoose.connect(mongoDbUrl)
         console.log("MongoDB connection failed!", err);
     });
 
+// Configure express
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
