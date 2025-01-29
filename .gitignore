@@ -1,7 +1,6 @@
-# Example content for engineering college project
+# Ignored Directories and Files
 .idea/
 node_modules/
 data/
 .env
 *.log
-.DS_Storetest.txt
