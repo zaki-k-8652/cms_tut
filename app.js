@@ -23,8 +23,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Route
 const defaultRoutes = require('./routes/defaultRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 app.use('/', defaultRoutes);
-//app.use('/admin/', adminRoutes);
+app.use('/admin', adminRoutes);
 
 app.listen(3000, () => {
     console.log("Server started on port 3000");
