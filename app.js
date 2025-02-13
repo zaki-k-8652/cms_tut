@@ -21,7 +21,7 @@ app.engine('handlebars', engine({ defaultLayout: 'default' }));
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
-// Route
+// Routes
 const defaultRoutes = require('./routes/defaultRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 app.use('/', defaultRoutes);
